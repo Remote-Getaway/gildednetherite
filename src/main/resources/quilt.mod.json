@@ -21,6 +21,7 @@
 			"init": "com.irosueun.gildednetherite.GildedNetherite"
 		},
 		"depends": [
+			
 			{
 				"id": "quilt_loader",
 				"versions": ">=0.17.0-"

@@ -1,8 +1,8 @@
 package com.irosueun.gildednetherite.mixin;
 
 import com.irosueun.gildednetherite.GildedNetherite;
-import com.irosueun.gildednetherite.items.RegisterItems;
 import com.google.common.collect.Lists;
+import com.irosueun.gildednetherite.items.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
@@ -36,19 +36,19 @@ public abstract class EntityMixin {
                     // if it's just "a piece of our armour" and increment a counter since we don't want people
                     // just breaking the game to make this work
 
-                    if (item.getItem() == RegisterItems.GILDED_NETHERITE_HELMET) {
+                    if (item.getItem() == ModItems.GILDED_NETHERITE_HELMET) {
                         hasHelmet.set(true);
                     }
 
-                    if (item.getItem() == RegisterItems.GILDED_NETHERITE_CHESTPLATE) {
+                    if (item.getItem() == ModItems.GILDED_NETHERITE_CHESTPLATE) {
                         hasChestplate.set(true);
                     }
 
-                    if (item.getItem() == RegisterItems.GILDED_NETHERITE_LEGGINGS) {
+                    if (item.getItem() == ModItems.GILDED_NETHERITE_LEGGINGS) {
                         hasLeggings.set(true);
                     }
 
-                    if (item.getItem() == RegisterItems.GILDED_NETHERITE_BOOTS) {
+                    if (item.getItem() == ModItems.GILDED_NETHERITE_BOOTS) {
                         hasBoots.set(true);
                     }
                 }
