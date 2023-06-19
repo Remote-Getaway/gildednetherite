@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "R": {
+      "item": "minecraft:lightning_rod"
+    }
+  },
+  "pattern": [
+    " B ",
+    "BNB",
+    " R "
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:gilded_netherite_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

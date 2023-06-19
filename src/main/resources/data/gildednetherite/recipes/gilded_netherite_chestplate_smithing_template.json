@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gildednetherite:gilded_netherite"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "item": "gildednetherite:gilded_netherite_chestplate"
+  },
+  "template": {
+    "item": "minecraft:nether_star"
+  }
+}

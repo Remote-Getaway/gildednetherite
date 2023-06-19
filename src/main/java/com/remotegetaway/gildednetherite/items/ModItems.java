@@ -4,10 +4,7 @@ package com.remotegetaway.gildednetherite.items;
 import com.remotegetaway.gildednetherite.materials.GildedNetheriteArmorMaterial;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.FoodComponents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -19,16 +16,20 @@ public class ModItems {
 
 	public static final Item GILDED_NETHERITE = new Item(new Item.Settings().fireproof());
 
+	public static final Item GILDED_NETHERITE_TEMPLATE = new Item(new Item.Settings().fireproof());
+
+	public static final Item GOLDEN_PORKCHOP = new GoldenPorkChopItem(new Item.Settings().food(FoodComponents.COOKED_PORKCHOP));
+
 	public static final Item GILDED_NETHERITE_HELMET =  new GildedNetheriteItem(GildedNetheriteArmorMaterial.GILDED_NETHERITE_ARMOR, ArmorItem.ArmorSlot.HELMET, (new Item.Settings().fireproof()));
 	public static final Item GILDED_NETHERITE_CHESTPLATE = new GildedNetheriteItem(GildedNetheriteArmorMaterial.GILDED_NETHERITE_ARMOR, ArmorItem.ArmorSlot.CHESTPLATE, (new Item.Settings().fireproof()));
 	public static final Item GILDED_NETHERITE_LEGGINGS = new GildedNetheriteItem(GildedNetheriteArmorMaterial.GILDED_NETHERITE_ARMOR, ArmorItem.ArmorSlot.LEGGINGS, (new Item.Settings().fireproof()));
 	public static final Item GILDED_NETHERITE_BOOTS = new GildedNetheriteItem(GildedNetheriteArmorMaterial.GILDED_NETHERITE_ARMOR, ArmorItem.ArmorSlot.BOOTS, (new Item.Settings().fireproof()));
 
-	public static final Item GOLDEN_PORKCHOP = new GoldenPorkChopItem(new Item.Settings().food(FoodComponents.COOKED_PORKCHOP));
-
 
 	public static void register() {
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite"), GILDED_NETHERITE);
+
+		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_template"), GILDED_NETHERITE_TEMPLATE);
 
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_helmet"), GILDED_NETHERITE_HELMET);
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_chestplate"), GILDED_NETHERITE_CHESTPLATE);
@@ -37,14 +38,13 @@ public class ModItems {
 
 		Registry.register(Registries.ITEM, new Identifier(MODID, "golden_porkchop"), GOLDEN_PORKCHOP);
 
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.addAfter(Items.NETHERITE_INGOT, GILDED_NETHERITE));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINKS).register(entries -> entries.addAfter(Items.COOKED_PORKCHOP, GOLDEN_PORKCHOP));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.addAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, GILDED_NETHERITE_TEMPLATE));
 
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addItem(GILDED_NETHERITE_HELMET));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addItem(GILDED_NETHERITE_CHESTPLATE));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addItem(GILDED_NETHERITE_LEGGINGS));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addItem(GILDED_NETHERITE_BOOTS));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(
+			Items.NETHERITE_BOOTS, GILDED_NETHERITE_HELMET, GILDED_NETHERITE_CHESTPLATE, GILDED_NETHERITE_LEGGINGS, GILDED_NETHERITE_BOOTS));
 
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS_AND_UTILITIES).register(entries -> entries.addItem(GILDED_NETHERITE));
 
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINKS).register(entries -> entries.addItem(GOLDEN_PORKCHOP));
 }
 }

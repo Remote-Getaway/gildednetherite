@@ -5,7 +5,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 
 
-public class GildedNetheriteItem extends ArmorItem implements AdvancedArmorItem{
+public class GildedNetheriteItem extends ArmorItem{
     public GildedNetheriteItem(ArmorMaterial material, ArmorSlot slot, Item.Settings settings) {
         super(material, slot, settings);
     }
@@ -15,8 +15,4 @@ public class GildedNetheriteItem extends ArmorItem implements AdvancedArmorItem{
         return true;
     }
 
-    @Override
-    public boolean hasKnockbackResistance() {
-        return getMaterial().getKnockbackResistance() > 0;
-    }
 }

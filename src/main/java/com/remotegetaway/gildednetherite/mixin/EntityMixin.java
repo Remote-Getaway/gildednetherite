@@ -57,7 +57,7 @@ public abstract class EntityMixin {
         if (hasHelmet.get() && hasChestplate.get() && hasLeggings.get() && hasBoots.get()) {
             // If we have all the pieces of armour, check damage types.
 
-            if (GildedNetherite.DAMAGE_SOURCES.contains(damage)) {
+            if (damage.isTypeIn(GildedNetherite.INVULNERABLE_DAMAGE_TAG)) {
                 cir.setReturnValue(true);
             }
         }
