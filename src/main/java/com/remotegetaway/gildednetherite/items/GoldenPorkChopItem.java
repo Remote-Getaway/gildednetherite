@@ -1,4 +1,4 @@
-package com.irosueun.gildednetherite.items;
+package com.remotegetaway.gildednetherite.items;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

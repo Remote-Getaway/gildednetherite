@@ -1,8 +1,8 @@
-package com.irosueun.gildednetherite.mixin;
+package com.remotegetaway.gildednetherite.mixin;
 
-import com.irosueun.gildednetherite.GildedNetherite;
+import com.remotegetaway.gildednetherite.GildedNetherite;
 import com.google.common.collect.Lists;
-import com.irosueun.gildednetherite.items.ModItems;
+import com.remotegetaway.gildednetherite.items.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;

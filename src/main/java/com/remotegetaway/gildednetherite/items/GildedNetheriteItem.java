@@ -1,12 +1,12 @@
-package com.irosueun.gildednetherite.items;
+package com.remotegetaway.gildednetherite.items;
 
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Item;
 
 
 public class GildedNetheriteItem extends ArmorItem implements AdvancedArmorItem{
-    public GildedNetheriteItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public GildedNetheriteItem(ArmorMaterial material, ArmorSlot slot, Item.Settings settings) {
         super(material, slot, settings);
     }
 

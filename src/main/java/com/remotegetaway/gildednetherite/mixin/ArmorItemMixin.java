@@ -1,6 +1,6 @@
-package com.irosueun.gildednetherite.mixin;
+package com.remotegetaway.gildednetherite.mixin;
 
-import com.irosueun.gildednetherite.items.AdvancedArmorItem;
+import com.remotegetaway.gildednetherite.items.AdvancedArmorItem;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.entity.EquipmentSlot;
@@ -37,8 +37,8 @@ public abstract class ArmorItemMixin implements AdvancedArmorItem {
     protected float knockbackResistance;
 
     @Inject(method = "<init>", at = @At(value = "RETURN"))
-    private void gildednetherite_ArmorItem(ArmorMaterial material, EquipmentSlot slot, Item.Settings settings, CallbackInfo ci) {
-        UUID uuid = MODIFIERS[slot.getEntitySlotId()];
+    private void gildednetherite_ArmorItem(ArmorMaterial material, ArmorItem.ArmorSlot slot, Item.Settings settings, CallbackInfo ci) {
+        UUID uuid = MODIFIERS[slot.ordinal()];
 
         if (hasKnockbackResistance() && this.knockbackResistance > 0) {
             ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();

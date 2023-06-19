@@ -1,6 +1,6 @@
-package com.irosueun.gildednetherite.mixin;
+package com.remotegetaway.gildednetherite.mixin;
 
-import com.irosueun.gildednetherite.materials.GildedNetheriteArmorMaterial;
+import com.remotegetaway.gildednetherite.materials.GildedNetheriteArmorMaterial;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.item.ArmorItem;

@@ -1,6 +1,7 @@
-package com.irosueun.gildednetherite.materials;
+package com.remotegetaway.gildednetherite.materials;
 
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.recipe.Ingredient;
@@ -13,8 +14,8 @@ public enum GildedNetheriteArmorMaterial implements ArmorMaterial {
     GILDED_NETHERITE_ARMOR("gilded_netherite_armor", 40, new int[]{4, 7, 9, 4}, 15,
                    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5F, 0.1F, NETHERITE_INGOT);
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
-    private final String name;
+	private final String name;
+    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final int durability, enchantability;
     private final int[] slotProtections;
     private final SoundEvent sound;
@@ -34,13 +35,13 @@ public enum GildedNetheriteArmorMaterial implements ArmorMaterial {
 
 
     @Override
-    public int getDurability(EquipmentSlot slot) {
-        return HEALTH_PER_SLOT[slot.getEntitySlotId()] * this.durability;
+    public int getDurability(ArmorItem.ArmorSlot slot) {
+        return BASE_DURABILITY[slot.ordinal()] * this.durability;
     }
 
     @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
-        return this.slotProtections[slot.getEntitySlotId()];
+    public int getProtection(ArmorItem.ArmorSlot slot) {
+        return this.slotProtections[slot.ordinal()];
     }
 
     @Override

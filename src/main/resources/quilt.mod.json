@@ -1,38 +1,37 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.irosueun",
+		"group": "com.remotegetaway",
 		"id": "gildednetherite",
 		"version": "${version}",
 		"metadata": {
 			"name": "Gilded Netherite",
-			"description": "Swim in lava with your new armor",
+			"description": "Swim in lava with your new armor.",
 			"contributors": {
-				"irosueun": "Owner"
+				"remote_getaway": "Owner"
 			},
 			"contact": {
 				"homepage": "https://www.curseforge.com/minecraft/mc-mods/gilded-netherite",
-				"sources": "https://github.com/irosueun/gildedenetherite"
+				"sources": "https://github.com/remotegetaway/gildedenetherite"
 			},
 			"icon": "assets/gildednetherite/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.irosueun.gildednetherite.GildedNetherite"
+			"init": "com.remotegetaway.gildednetherite.GildedNetherite"
 		},
 		"depends": [
-			
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.17.0-"
+				"versions": ">=0.19.1"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=4.0.0-"
+				"versions": ">=7.0.2"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.19.2"
+				"versions": ">=1.20"
 			}
 		]
 	},
