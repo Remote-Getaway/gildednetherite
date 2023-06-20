@@ -9,14 +9,14 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static com.remotegetaway.gildednetherite.items.GildedNetheriteTemplateItem.GILDED_NETHERITE_TEMPLATE;
+
 
 public class ModItems {
 
 	private static final String MODID = "gildednetherite";
 
 	public static final Item GILDED_NETHERITE = new Item(new Item.Settings().fireproof());
-
-	public static final Item GILDED_NETHERITE_TEMPLATE = new Item(new Item.Settings().fireproof());
 
 	public static final Item GOLDEN_PORKCHOP = new GoldenPorkChopItem(new Item.Settings().food(FoodComponents.COOKED_PORKCHOP));
 
@@ -28,8 +28,6 @@ public class ModItems {
 
 	public static void register() {
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite"), GILDED_NETHERITE);
-
-		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_template"), GILDED_NETHERITE_TEMPLATE);
 
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_helmet"), GILDED_NETHERITE_HELMET);
 		Registry.register(Registries.ITEM, new Identifier(MODID, "gilded_netherite_chestplate"), GILDED_NETHERITE_CHESTPLATE);

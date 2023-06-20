@@ -7,9 +7,9 @@
     "item": "minecraft:netherite_boots"
   },
   "result": {
-    "item": "gildednetherite:gilded_netherite_leggings"
+    "item": "gildednetherite:gilded_netherite_boots"
   },
   "template": {
-    "item": "minecraft:nether_star"
+    "item": "gildednetherite:gilded_netherite_template"
   }
 }

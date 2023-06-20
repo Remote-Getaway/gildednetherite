@@ -4,12 +4,12 @@
     "item": "gildednetherite:gilded_netherite"
   },
   "base": {
-    "item": "minecraft:netherite_boots"
+    "item": "minecraft:netherite_helmet"
   },
   "result": {
-    "item": "gildednetherite:gilded_netherite_boots"
+    "item": "gildednetherite:gilded_netherite_helmet"
   },
   "template": {
-    "item": "minecraft:nether_star"
+    "item": "gildednetherite:gilded_netherite_template"
   }
 }

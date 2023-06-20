@@ -5,6 +5,7 @@
   "itemGroup.gildednetherite.gilded_netherite_group": "Gilded Netherite",
 
   "item.gildednetherite.gilded_netherite": "Gilded Netherite",
+  "item.gildednetherite.gilded_netherite_template.gilded_netherite_template": "Gilded Netherite Template",
   "item.gildednetherite.gilded_netherite_helmet": "Gilded Netherite Helmet",
   "item.gildednetherite.gilded_netherite_chestplate": "Gilded Netherite Chestplate",
   "item.gildednetherite.gilded_netherite_leggings": "Gilded Netherite Leggings",
@@ -12,5 +13,12 @@
 
   "subtitles.item.armor.equip_gildednetherite": "Gilded Netherite armor clanks",
 
-  "item.gildednetherite.golden_porkchop": "Golden Porkchop"
+  "item.gildednetherite.golden_porkchop": "Golden Porkchop",
+
+  "item.gildednetherite.smithing_template.gilded_netherite_upgrade.applies_to": "Netherite Equipment",
+  "item.gildednetherite.smithing_template.gilded_netherite_upgrade.ingredients": "Gilded Netherite",
+  "item.gildednetherite.smithing_template.gilded_netherite_upgrade.base_slot_description": "Add Netherite Armor",
+  "item.gildednetherite.smithing_template.gilded_netherite_upgrade.additions_slot_description": "Add Gilded Netherite"
+
+
 }

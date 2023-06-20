@@ -1,6 +1,7 @@
 package com.remotegetaway.gildednetherite;
 
 import com.google.common.collect.Lists;
+import com.remotegetaway.gildednetherite.items.GildedNetheriteTemplateItem;
 import com.remotegetaway.gildednetherite.items.ModItems;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -17,6 +18,8 @@ import net.minecraft.util.Identifier;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,23 +31,17 @@ import static net.minecraft.entity.damage.DamageTypes.*;
 public class GildedNetherite implements ModInitializer {
 
 	public static final String MOD_ID = "gildednetherite";
-
-	private static Item GILDED_NETHERITE;
-	private static Item GILDED_NETHERITE_HELMET;
-	private static Item GILDED_NETHERITE_CHESTPLATE;
-	private static Item GILDED_NETHERITE_LEGGINGS;
-	private static Item GILDED_NETHERITE_BOOTS;
-
-	private static Item GOLDEN_PORKCHOP;
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize(ModContainer mod) {
 
 		ModItems.register();
+		GildedNetheriteTemplateItem.registerModItems();
 	}
 
 	public static final TagKey<DamageType> INVULNERABLE_DAMAGE_TAG =
 		TagKey.of(RegistryKeys.DAMAGE_TYPE,
-			new Identifier("gildednetherite", "gilded_netherite_armor_invulnerable_to"));
+			new Identifier("gildednetherite", "gilded_netherite_armor_immune_to"));
 
 }

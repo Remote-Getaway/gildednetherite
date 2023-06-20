@@ -4,12 +4,12 @@
     "item": "gildednetherite:gilded_netherite"
   },
   "base": {
-    "item": "minecraft:netherite_boots"
+    "item": "minecraft:netherite_leggings"
   },
   "result": {
-    "item": "gildednetherite:gilded_netherite_chestplate"
+    "item": "gildednetherite:gilded_netherite_leggings"
   },
   "template": {
-    "item": "minecraft:nether_star"
+    "item": "gildednetherite:gilded_netherite_template"
   }
 }
